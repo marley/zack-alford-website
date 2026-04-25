@@ -37,7 +37,11 @@ const App = () => {
           <Connect />
         </Page>
         <div className="footer font-display">
-          <p>{t("zack-alford-copyright")}</p>
+          <p>
+            {t("zack-alford-copyright", {
+              year: new Date().getFullYear(),
+            })}
+          </p>
           <small>{t("site-by")}</small>
           <a
             href="https://github.com/ma8642"

@@ -12,7 +12,7 @@ const Gallery = () => {
   const largeScreenTitleStyling = "lg:bg-transparent";
 
   const galleries = galleryData.map((gallery) => (
-    <div className="relative">
+    <div key={gallery.id} className="relative">
       <Link
         activeClass="active"
         to="gallery"
@@ -41,17 +41,18 @@ const Gallery = () => {
           </div>
           <div className="p-6"></div>
         </div>
-        <a href={gallery.href} className="relative">
+        <div className="relative">
           <div className="h-48 flex flex-wrap content-center w-full">
             <img
-              key={gallery.id}
               src={gallery.src}
               alt={`${gallery.title} gallery`}
-              maxWidth="100%"
+              className="w-full h-full object-cover"
               width="100%"
+              loading="lazy"
+              decoding="async"
             />
           </div>
-        </a>
+        </div>
       </Link>
     </div>
   ));

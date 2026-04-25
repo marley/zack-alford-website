@@ -16,14 +16,23 @@ const GalleryCollection = ({ gallery, handleCloseClick }) => {
           <h2 className="mr-2">{gallery.title.toUpperCase()}</h2>{" "}
           <h3>{gallery.year}</h3>
         </div>
-        <CloseOutlined
-          className="flex justify-end mb-2 text-xl"
+        <button
+          type="button"
+          className="flex justify-end mb-2 p-0 text-xl border-0 bg-transparent text-inherit cursor-pointer"
           onClick={handleCloseClick}
-        />
+          aria-label="Close gallery"
+        >
+          <CloseOutlined />
+        </button>
       </div>
       <div className="flex flex-col justify-center content-center">
         <div className="focused-image flex justify-center flex-col">
-          <img src={focusedImage.src} height="100vh" alt={focusedImage.alt} />
+          <img
+            src={focusedImage.src}
+            alt={focusedImage.alt}
+            className="max-h-[85vh] w-auto mx-auto object-contain"
+            decoding="async"
+          />
           <div id="description">{focusedImage.desc}</div>
         </div>
 
@@ -41,11 +50,13 @@ const GalleryCollection = ({ gallery, handleCloseClick }) => {
                   containerId="main-container"
                 >
                   <img
-                    key={i}
                     src={photo.src}
-                    height="70px"
-                    width="70px"
+                    height="70"
+                    width="70"
                     alt={photo.alt}
+                    className="h-[70px] w-[70px] object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </Link>
               </div>

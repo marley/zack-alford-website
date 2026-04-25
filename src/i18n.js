@@ -38,7 +38,7 @@ i18n
           "view-album": "View",
           gear: "Gear",
           connect: "Connect",
-          "zack-alford-copyright": "(c) Zachary Alford 2026",
+          "zack-alford-copyright": "(c) Zachary Alford {{year}}",
           "site-by": "Site by ",
         },
       },

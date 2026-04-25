@@ -4,10 +4,16 @@ import bgImage from "../assets/gear/gear-bg.webp";
 
 const Gear = () => {
   // TODO figure out how to align-items-center this page content!
-  const gear = gearData.map((gear) => (
-    <div className="transform hover:scale-105">
-      <a href={gear.href} target="_blank" rel="noreferrer">
-        <img key={gear.id} src={gear.src} alt={gear.alt} maxWidth="100%" />
+  const gear = gearData.map((item) => (
+    <div key={item.id} className="transform hover:scale-105">
+      <a href={item.href} target="_blank" rel="noreferrer">
+        <img
+          src={item.src}
+          alt={item.alt}
+          className="max-w-full w-full h-auto"
+          loading="lazy"
+          decoding="async"
+        />
       </a>
     </div>
   ));
@@ -19,8 +25,9 @@ const Gear = () => {
           <img
             src={bgImage}
             alt="Zack playing drums in dim, red lighting."
-            maxWidth="30%"
-            className="hidden md:block"
+            className="hidden md:block max-w-[30%] w-full h-auto"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="flex flex-col justify-center items-center">{gear}</div>

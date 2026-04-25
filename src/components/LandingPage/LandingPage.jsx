@@ -8,13 +8,16 @@ import "./overrides.css"; // change this to the file path of your overrides
 const LandingPage = (props) => {
   const title = props.siteTitle ? props.siteTitle : props.title;
 
-  const carouselArr = carouselData.map((data, i) => {
+  const carouselArr = carouselData.map((data, index) => {
+    const isFirst = index === 0;
     return (
-      <div className="h-xl">
+      <div key={data.id} className="h-xl">
         <img
-          src={carouselData[i].src}
-          alt={carouselData[i].alt}
-          className="object-cover"
+          src={data.src}
+          alt={data.alt}
+          className="w-full h-full object-cover"
+          loading={isFirst ? "eager" : "lazy"}
+          decoding="async"
         />
       </div>
     );

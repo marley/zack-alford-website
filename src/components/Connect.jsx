@@ -7,13 +7,14 @@ const style =
 
 const ButtonsOverlay = () => {
   return (
-    <div id="social-buttons" className="absolute top-1/2 left-1/2 bg-blue">
+    <div id="social-buttons" className="absolute top-1/2 left-1/2">
       <div className="flex md:flex-col">
         <a
           href={import.meta.env.VITE_INSTA}
           target="_blank"
           rel="noreferrer"
           className="m-10"
+          aria-label="Instagram"
         >
           <div className={style}>
             <InstagramOutlined alt="instagram" />
@@ -24,6 +25,7 @@ const ButtonsOverlay = () => {
           target="_blank"
           rel="noreferrer"
           className="m-10"
+          aria-label="Facebook"
         >
           <div className={style}>
             <FacebookFilled alt="facebook" />
@@ -46,8 +48,9 @@ const Connect = (props) => {
         <img
           src={bgImage}
           alt="Zack playing drums in dim, red lighting."
-          maxWidth="30%"
-          className="hidden md:block"
+          className="hidden md:block max-w-[30%] w-full h-auto"
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <ButtonsOverlay />
