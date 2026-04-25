@@ -10,7 +10,7 @@ const ButtonsOverlay = () => {
     <div id="social-buttons" className="absolute top-1/2 left-1/2 bg-blue">
       <div className="flex md:flex-col">
         <a
-          href={process.env.REACT_APP_INSTA}
+          href={import.meta.env.VITE_INSTA}
           target="_blank"
           rel="noreferrer"
           className="m-10"
@@ -20,7 +20,7 @@ const ButtonsOverlay = () => {
           </div>
         </a>
         <a
-          href={process.env.REACT_APP_FB}
+          href={import.meta.env.VITE_FB}
           target="_blank"
           rel="noreferrer"
           className="m-10"
