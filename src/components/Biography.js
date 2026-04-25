@@ -10,8 +10,8 @@ const Biography = () => {
       text.push(<br />);
     } else {
       text.push(
-        <li class="mt-3 mb-3 ml-6">
-          <div class="absolute -left-2 mt-6 rounded-full border-4 bg-white"></div>
+        <li className="mt-3 mb-3 ml-6">
+          <div className="absolute -left-2 mt-6 rounded-full border-4 bg-white"></div>
           <h2 className="text-red-600 font-display">
             {t(`biography-para-${counter + 1}.title`)}
           </h2>{" "}

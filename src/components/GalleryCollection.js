@@ -7,7 +7,6 @@ const GalleryCollection = ({ gallery, handleCloseClick }) => {
   // One big photo
   // a row of small thumbnails underneath. Each one clicked becomes the big one shown.
   const collection = collectionsData[gallery.id];
-  console.log(gallery.id);
   const [focusedImage, setFocusedImage] = useState(collection[0]);
 
   return (
