@@ -4,8 +4,10 @@ This is the code for Zack Alford's professional website.
 
 # To Run
 
-1. `npm run start`
-2. If you make changes, stop the server and run `npm run deploy` to deploy changes to the `gh-pages` branch.
+1. Copy `.env.example` to `.env` and set `VITE_*` values (social links and optional email parts). Vite only loads variables prefixed with `VITE_` (replacing the old `REACT_APP_*` names from Create React App).
+2. `npm run start` or `npm run dev` (Vite dev server).
+3. For a production build locally: `npm run build` then `npm run preview`.
+4. To deploy: `npm run deploy` (publishes the `build/` output to the `gh-pages` branch; `predeploy` runs the build and copies `CNAME` into `build/`).
 
 # To-Do
 
