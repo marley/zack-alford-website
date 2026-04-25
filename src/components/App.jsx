@@ -4,6 +4,9 @@ import MenuBar from "./MenuBar";
 import LandingPage from "./LandingPage/LandingPage";
 import Page from "./Page";
 import Biography from "./Biography";
+import TourDates from "./TourDates";
+import Listen from "./Listen";
+import News from "./News";
 import Discography from "./Discography";
 import Gallery from "./Gallery";
 import Gear from "./Gear";
@@ -11,7 +14,17 @@ import Connect from "./Connect";
 
 const App = () => {
   const { t } = useTranslation();
-  const pages = ["main", "bio", "discography", "gallery", "gear", "connect"];
+  const pages = [
+    "main",
+    "tour",
+    "listen",
+    "bio",
+    "discography",
+    "gallery",
+    "news",
+    "gear",
+    "connect",
+  ];
 
   return (
     <div className="App px-4 bg-black text-white">
@@ -21,6 +34,12 @@ const App = () => {
         className="bg-black fixed top-20 left-0 bottom-0 overflow-y-scroll"
       >
         <LandingPage id="main" siteTitle="Zachary Alford" />
+        <Page id="tour" title={t("tour")}>
+          <TourDates />
+        </Page>
+        <Page id="listen" title={t("listen")}>
+          <Listen />
+        </Page>
         <Page id="bio" title={t("bio")}>
           <Biography />
         </Page>
@@ -29,6 +48,9 @@ const App = () => {
         </Page>
         <Page id="gallery" title={t("gallery")}>
           <Gallery />
+        </Page>
+        <Page id="news" title={t("news")}>
+          <News />
         </Page>
         <Page id="gear" title={t("gear")} titleContrast={true}>
           <Gear />

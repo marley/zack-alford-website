@@ -9,6 +9,13 @@ This is the code for Zack Alford's professional website.
 3. For a production build locally: `npm run build` then `npm run preview`.
 4. To deploy: `npm run deploy` (publishes the `build/` output to the `gh-pages` branch; `predeploy` runs the build and copies `CNAME` into `build/`).
 
+## Current content (tour, news, listen)
+
+- **Tour dates** — edit [`src/data/tourDates.js`](src/data/tourDates.js) (`manualTourDates`) for a static list, or set `VITE_BANDSINTOWN_APP_ID` and `VITE_BANDSINTOWN_ARTIST_NAME` (from [Bandsintown for Artists](https://artists.bandsintown.com/)) to try the live API. Set `VITE_BANDSINTOWN_ARTIST_URL` to your Bandsintown profile for the “all dates” link.
+- **News** — edit [`src/data/news.js`](src/data/news.js).
+- **Listen** — set `VITE_SPOTIFY_ARTIST_ID` and `VITE_YOUTUBE_VIDEO_ID` for embeds, or at least the Spotify/YouTube **profile** URLs in `.env` for text links.
+- **Copy** (bio, hero, labels) is in [`src/i18n.js`](src/i18n.js) under `translation` → `en`.
+
 # To-Do
 
 - [x] Create image carousel
