@@ -4,6 +4,7 @@ import zuccheroMain from "../img/galleries/zucchero/zucchero_main.webp";
 import b52sMain from "../img/galleries/b52s/b52s_main.webp";
 import springsteenMain from "../img/galleries/bruce_springsteen/bspring_main.webp";
 import hoteiMain from "../img/galleries/hotei/hotei_main.webp";
+import pfursMain from "../img/galleries/pfurs/pfursMain.webp";
 import otherMain from "../img/galleries/other/other_main.webp";
 
 // gwen stefani images
@@ -151,6 +152,11 @@ import hotei22 from "../img/galleries/hotei/hotei22.webp";
 import hotei23 from "../img/galleries/hotei/hotei23.webp";
 import hotei24 from "../img/galleries/hotei/hotei24.webp";
 
+// pfurs
+import pfur1 from "../img/galleries/pfurs/TimB3A.webp";
+import pfur2 from "../img/galleries/pfurs/Zac4.webp";
+import pfur3 from "../img/galleries/pfurs/Zac5.webp";
+
 // other images
 import other1 from "../img/galleries/other/other01.webp";
 import other2 from "../img/galleries/other/other02.webp";
@@ -210,7 +216,7 @@ const galleryData = [
   },
   {
     id: 4,
-    title: "B52's",
+    title: "The B52's",
     year: "1989-2006",
     src: b52sMain,
     href: "#",
@@ -224,6 +230,14 @@ const galleryData = [
   },
   {
     id: 6,
+    title: "The Psychedelic Furs",
+    titleSize: "text-sm",
+    year: "2021-2026",
+    src: pfursMain,
+    href: "#",
+  },
+  {
+    id: 7,
     title: "Other",
     year: "",
     src: otherMain,
@@ -907,6 +921,23 @@ const collectionsData = {
     },
   ],
   6: [
+    {
+      src: pfur1,
+      alt: "",
+      desc: "",
+    },
+    {
+      src: pfur2,
+      alt: "",
+      desc: "",
+    },
+    {
+      src: pfur3,
+      alt: "",
+      desc: "",
+    },
+  ],
+  7: [
     {
       src: other1,
       alt: "",
