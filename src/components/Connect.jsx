@@ -57,7 +57,7 @@ const Connect = () => {
   const links = socialLinks(t).filter((x) => x.href);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full min-h-[50vh] md:min-h-0">
       <div data-testid="connect-photo" className="static flex justify-center md:justify-start">
         <img
           src={bgImage}
@@ -67,16 +67,16 @@ const Connect = () => {
           decoding="async"
         />
       </div>
-      <div className="md:absolute md:top-1/2 md:left-1/2 w-full max-w-2xl md:max-w-none md:w-auto md:-translate-x-1/2 md:-translate-y-1/2">
+      <div className="w-full flex flex-col items-center justify-center py-6 md:py-0 md:absolute md:inset-0 md:z-10">
         {links.length === 0 ? (
           <p className="text-gray-500 text-center py-4">{t("connect-empty")}</p>
         ) : (
           <ul
-            className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4 justify-items-stretch p-0 list-none m-0"
+            className="flex flex-col items-stretch gap-3 md:gap-4 p-0 list-none m-0 w-full max-w-sm mx-auto"
             role="list"
           >
             {links.map(({ href, label, Icon }) => (
-              <li key={label}>
+              <li key={label} className="w-full">
                 <a
                   href={href}
                   target="_blank"
