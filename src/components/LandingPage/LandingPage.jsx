@@ -39,7 +39,6 @@ const LandingPage = (props) => {
         <div className="absolute bottom-0 left-0 z-20 w-full max-w-full pr-2 pb-6 pl-2 md:pb-10 md:pl-3 pointer-events-none">
           <div className="pointer-events-auto max-w-lg">
             <motion.div
-              className="bg-black/45 backdrop-blur-md border border-white/20 rounded-2xl p-5 md:p-8 shadow-2xl"
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -51,9 +50,6 @@ const LandingPage = (props) => {
               <h1 className="text-left font-display text-4xl sm:text-6xl md:text-7xl text-gray-100 leading-none mb-3 tracking-tight">
                 {title}
               </h1>
-              <p className="text-gray-400 font-body text-sm md:text-base mb-5 max-w-md leading-relaxed">
-                {t("hero-subtitle")}
-              </p>
               <div className="flex flex-wrap gap-2">
                 <Link
                   activeClass="active"

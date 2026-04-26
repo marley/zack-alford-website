@@ -14,8 +14,6 @@ i18n.use(initReactI18next).init({
         tour: "Tour",
         listen: "Listen",
         news: "News",
-        "hero-subtitle":
-          "Professional drummer — live with The Psychedelic Furs and sessions with artists from Bowie to Springsteen.",
         "cta-tour": "Tour dates",
         "cta-listen": "Listen",
         "tour-none":
