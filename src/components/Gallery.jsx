@@ -27,7 +27,7 @@ const Gallery = () => {
         >
           <div>
             <h1
-              className={`tracking-wider ${
+              className={`font-body tracking-wider ${
                 gallery.titleSize ?? "text-lg"
               } md:text-3xl font-black -mt-2 ${mobileTitleStyling} ${largeScreenTitleStyling}`}
             >
