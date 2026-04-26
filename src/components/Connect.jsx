@@ -10,7 +10,7 @@ import {
 import bgImage from "../assets/connect/connect-bg_joshuamodlinger.webp";
 
 const chip =
-  "p-4 md:p-5 text-black bg-green-400 rounded flex items-center justify-center gap-2 transform hover:scale-105 min-w-[3rem]";
+  "p-4 md:p-5 text-black bg-green-400 rounded flex items-center justify-center gap-2 transform hover:scale-105";
 
 const socialLinks = (t) => {
   return [
@@ -86,9 +86,6 @@ const Connect = () => {
                 >
                   <div className={chip}>
                     <Icon className="text-xl" aria-hidden />
-                    <span className="font-display text-sm uppercase tracking-wide">
-                      {label}
-                    </span>
                   </div>
                 </a>
               </li>
