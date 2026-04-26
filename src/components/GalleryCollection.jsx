@@ -38,6 +38,7 @@ const GalleryCollection = ({ gallery, handleCloseClick }) => {
 
         <div className="thumbnail-row grid gap-1 grid-cols-6 grid-rows-1 overflow-x-auto">
           {collection.map((photo, i) => {
+            const isSelected = photo.src === focusedImage.src;
             return (
               <div key={i} className="cursor-pointer">
                 <Link
@@ -54,7 +55,9 @@ const GalleryCollection = ({ gallery, handleCloseClick }) => {
                     height="70"
                     width="70"
                     alt={photo.alt}
-                    className="h-[70px] w-[70px] object-cover"
+                    className={`h-[70px] w-[70px] object-cover border-4 ${
+                      isSelected ? "border-green-500" : "border-transparent"
+                    }`}
                     loading="lazy"
                     decoding="async"
                   />
