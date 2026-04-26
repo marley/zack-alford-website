@@ -21,12 +21,17 @@ i18n.use(initReactI18next).init({
         "tour-none":
           "Check back for announcements, or get in touch.",
         "tour-tickets": "Tickets & info",
-        "listen-config-hint":
-          "Set VITE_SPOTIFY_ARTIST_ID and VITE_YOUTUBE_VIDEO_ID in .env to embed players here. You can also open",
-        "listen-spotify-link": "Spotify",
-        "listen-youtube-link": "YouTube",
-        "listen-spotify-heading": "Spotify",
-        "listen-video-heading": "Featured video",
+        "listen-empty":
+          "No tracks added yet. Edit `src/data/tracks.js` to add releases, videos, and links from any service.",
+        "listen-platform-youtube": "YouTube",
+        "listen-platform-spotify": "Spotify",
+        "listen-platform-bandcamp": "Bandcamp",
+        "listen-platform-tidal": "TIDAL",
+        "listen-platform-other": "Link",
+        "listen-platform-unknown": "Web",
+        "listen-open": "Open on {{label}}",
+        "listen-open-generic": "Open in new tab",
+        "listen-open-on-site": "Open on {{site}}",
         "news-empty": "No news items yet.",
         "last-updated": "Bio last reviewed {{month}} {{year}}",
         "connect-empty":

@@ -1,80 +1,139 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { tracks } from "../data/tracks";
+
+function platformLabel(t, platform) {
+  if (platform === "youtube") return t("listen-platform-youtube");
+  if (platform === "spotify") return t("listen-platform-spotify");
+  if (platform === "bandcamp") return t("listen-platform-bandcamp");
+  if (platform === "tidal") return t("listen-platform-tidal");
+  if (platform === "other") return t("listen-platform-other");
+  return t("listen-platform-unknown");
+}
+
+function spotifyEmbedSrc(track) {
+  const type = track.embedType === "album" ? "album" : "track";
+  return `https://open.spotify.com/embed/${type}/${track.embedId}?utm_source=generator&theme=0`;
+}
+
+/** TIDAL public links include /track|album|playlist/<numeric id> — map to embed.tidal.com */
+function getTidalEmbedUrl(track) {
+  if (track.platform !== "tidal") return null;
+  const m = String(track.url || "").match(/\/(track|album|playlist)\/(\d+)/i);
+  if (m) {
+    const seg = { track: "tracks", album: "albums", playlist: "playlists" }[m[1].toLowerCase()];
+    if (seg) return `https://embed.tidal.com/${seg}/${m[2]}`;
+  }
+  if (track.embedId) {
+    return `https://embed.tidal.com/tracks/${track.embedId}`;
+  }
+  return null;
+}
+
+function renderTrackEmbed(track, heading) {
+  const tidalSrc = getTidalEmbedUrl(track);
+  if (track.embedUrl) {
+    return (
+      <iframe
+        title={heading}
+        className="w-full rounded-lg border-0"
+        style={{ minHeight: track.embedHeight ?? 200 }}
+        height={track.embedHeight}
+        src={track.embedUrl}
+        loading="lazy"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        allowFullScreen
+      />
+    );
+  }
+  if (track.platform === "youtube" && track.embedId) {
+    return (
+      <div
+        className="relative w-full overflow-hidden rounded-lg"
+        style={{ paddingBottom: "56.25%" }}
+      >
+        <iframe
+          title={heading}
+          className="absolute left-0 top-0 h-full w-full border-0"
+          src={`https://www.youtube.com/embed/${track.embedId}`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+  if (track.platform === "spotify" && track.embedId) {
+    return (
+      <iframe
+        title={heading}
+        style={{ borderRadius: 12, width: "100%" }}
+        height={track.embedType === "album" ? 380 : 352}
+        allowFullScreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        src={spotifyEmbedSrc(track)}
+      />
+    );
+  }
+  if (tidalSrc) {
+    return (
+      <iframe
+        title={heading}
+        className="w-full max-w-full rounded-lg border-0"
+        style={{ minHeight: track.embedHeight ?? 166 }}
+        height={track.embedHeight ?? 166}
+        src={tidalSrc}
+        allow="encrypted-media; clipboard-write"
+        loading="lazy"
+      />
+    );
+  }
+  return null;
+}
 
 const Listen = () => {
   const { t } = useTranslation();
-  const spotifyId = import.meta.env.VITE_SPOTIFY_ARTIST_ID;
-  const youtubeId = import.meta.env.VITE_YOUTUBE_VIDEO_ID;
-  const spotifyUrl = import.meta.env.VITE_SPOTIFY_ARTIST_URL;
-  const youtubeUrl = import.meta.env.VITE_YOUTUBE_CHANNEL_URL;
-
-  const hasSpotify = Boolean(spotifyId);
-  const hasVideo = Boolean(youtubeId);
-
-  if (!hasSpotify && !hasVideo) {
-    return (
-      <p className="text-gray-500 text-center max-w-xl mx-auto">
-        {t("listen-config-hint")}{" "}
-        {spotifyUrl && (
-          <a
-            href={spotifyUrl}
-            className="text-green-400 hover:underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t("listen-spotify-link")}
-          </a>
-        )}
-        {spotifyUrl && youtubeUrl ? " · " : null}
-        {youtubeUrl && (
-          <a
-            href={youtubeUrl}
-            className="text-green-400 hover:underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t("listen-youtube-link")}
-          </a>
-        )}
-      </p>
-    );
-  }
 
   return (
     <div className="w-full max-w-3xl mx-auto flex flex-col gap-10">
-      {hasSpotify && (
-        <div>
-          <h2 className="font-display text-xl text-red-600 mb-3">
-            {t("listen-spotify-heading")}
-          </h2>
-          <iframe
-            title={t("listen-spotify-heading")}
-            style={{ borderRadius: 12, width: "100%" }}
-            height="352"
-            allowFullScreen
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            src={`https://open.spotify.com/embed/artist/${spotifyId}?utm_source=generator&theme=0`}
-          />
-        </div>
-      )}
-      {hasVideo && (
-        <div>
-          <h2 className="font-display text-xl text-red-600 mb-3">
-            {t("listen-video-heading")}
-          </h2>
-          <div className="relative w-full aspect-video max-h-[50vh]">
-            <iframe
-              title={t("listen-video-heading")}
-              className="absolute inset-0 w-full h-full rounded-lg"
-              src={`https://www.youtube.com/embed/${youtubeId}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              loading="lazy"
-            />
+      {tracks.map((track) => {
+        const label = platformLabel(t, track.platform);
+        const heading = [track.artist, track.title].filter(Boolean).join(" — ");
+        const embed = renderTrackEmbed(track, heading);
+        const hasEmbed = Boolean(embed);
+        const openOnText = hasEmbed
+          ? t("listen-open-on-site", { site: label })
+          : track.platform === "other"
+            ? t("listen-open-generic")
+            : t("listen-open", { label });
+
+        return (
+          <div
+            key={track.id}
+            className="border-l-4 border-red-600/80 pl-4 py-2 bg-white/5 rounded-r"
+          >
+            <p className="text-xs text-gray-500 font-display tracking-wide mb-1">
+              {label}
+            </p>
+            <h2 className="font-display text-lg text-gray-100 mb-1">{track.title}</h2>
+            <p className="text-gray-400 text-sm mb-3">{track.artist}</p>
+
+            <div className="space-y-3">
+              {embed}
+              <a
+                href={track.url}
+                className={`inline-block text-green-400 font-display hover:underline${
+                  hasEmbed ? " text-sm" : ""
+                }`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {openOnText}
+              </a>
+            </div>
           </div>
-        </div>
-      )}
+        );
+      })}
     </div>
   );
 };

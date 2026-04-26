@@ -13,7 +13,7 @@ This is the code for Zack Alford's professional website.
 
 - **Tour dates** — edit [`src/data/tourDates.js`](src/data/tourDates.js) (`manualTourDates`): each show has an `artist` and optional `artistUrl` (e.g. official site or Bandsintown for that act), plus date, venue, and optional ticket link.
 - **News** — edit [`src/data/news.js`](src/data/news.js).
-- **Listen** — set `VITE_SPOTIFY_ARTIST_ID` and `VITE_YOUTUBE_VIDEO_ID` for embeds, or at least the Spotify/YouTube **profile** URLs in `.env` for text links.
+- **Listen** — edit [`src/data/tracks.js`](src/data/tracks.js): list tracks with `url`, and optional `embedId` for YouTube or Spotify in-page players; other services use outbound links. Connect can still use `VITE_SPOTIFY_ARTIST_URL` and `VITE_YOUTUBE_CHANNEL_URL` in `.env` for social buttons.
 - **Copy** (bio, hero, labels) is in [`src/i18n.js`](src/i18n.js) under `translation` → `en`.
 
 # To-Do

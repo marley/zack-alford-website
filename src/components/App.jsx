@@ -11,13 +11,13 @@ import Discography from "./Discography";
 import Gallery from "./Gallery";
 import Gear from "./Gear";
 import Connect from "./Connect";
+import { tracks } from "../data/tracks";
 
 const App = () => {
   const { t } = useTranslation();
   const pages = [
     "main",
     "tour",
-    "listen",
     "bio",
     "discography",
     "gallery",
@@ -25,6 +25,9 @@ const App = () => {
     "gear",
     "connect",
   ];
+  if (tracks.length > 0) {
+    pages.splice(2, 0, "listen")
+  }
 
   return (
     <div className="App px-4 bg-black text-gray-200">
@@ -37,9 +40,11 @@ const App = () => {
         <Page id="tour" title={t("tour")}>
           <TourDates />
         </Page>
-        <Page id="listen" title={t("listen")}>
-          <Listen />
-        </Page>
+        { tracks.length > 0 &&
+          <Page id="listen" title={t("listen")}>
+            <Listen />
+          </Page>
+        }
         <Page id="bio" title={t("bio")}>
           <Biography />
         </Page>
