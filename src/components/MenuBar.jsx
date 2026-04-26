@@ -11,20 +11,21 @@ const MenuBar = ({ pages }) => {
         : "flex items-center pr-4 py-2 hover:text-green-400";
 
     return (
-      <div key={title} className={`text-gray-200 ${style}`}>
+      
         <button className="uppercase" type="button">
-          <Link
-            activeClass="active"
-            to={title}
-            spy={true}
-            smooth={true}
-            duration={250}
-            containerId="main-container"
-          >
-            {title}
-          </Link>
+          <div key={title} className={`text-gray-200 ${style}`}>
+            <Link
+              activeClass="active"
+              to={title}
+              spy={true}
+              smooth={true}
+              duration={250}
+              containerId="main-container"
+            >
+              {title}
+            </Link>
+          </div>
         </button>
-      </div>
     );
   });
 

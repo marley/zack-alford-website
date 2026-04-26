@@ -22,7 +22,7 @@ const App = () => {
     "bio",
     "discography",
     "gallery",
-    "news",
+    // "news",
     "gear",
     "connect",
   ];
