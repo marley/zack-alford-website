@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "title": "The Next Day",
+    "artist": "David Bowie",
+    "image": "the-next-day.webp",
+    "url": "https://bowie.lnk.to/TheNextDayAW"
+  },
+  {
+    "id": 2,
+    "title": "Good Fortune, Bad Weather",
+    "artist": "Lettie",
+    "image": "lettie.webp",
+    "url": null
+  },
+  {
+    "id": 3,
+    "title": "je sais que la terre est plate",
+    "artist": "raphael",
+    "image": "je-sais.webp",
+    "url": null
+  },
+  {
+    "id": 4,
+    "title": "pacific 231",
+    "artist": "raphael",
+    "image": "231-pacific.webp",
+    "url": null
+  },
+  {
+    "id": 5,
+    "title": "Bruce Springsteen in Concert",
+    "artist": "Bruce Springsteen",
+    "image": "bruce-springsteen.webp",
+    "url": null
+  },
+  {
+    "id": 6,
+    "title": "Earthling",
+    "artist": "David Bowie",
+    "image": "earthling.webp",
+    "url": null
+  },
+  {
+    "id": 7,
+    "title": "Rumble Doll",
+    "artist": "Patty Scialfa",
+    "image": "rumble-doll.webp",
+    "url": null
+  },
+  {
+    "id": 8,
+    "title": "River of Dreams",
+    "artist": "Billy Joel",
+    "image": "billy-joel.webp",
+    "url": null
+  },
+  {
+    "id": 9,
+    "title": "Funplex",
+    "artist": "B52's",
+    "image": "funplex.webp",
+    "url": null
+  },
+  {
+    "id": 10,
+    "title": "Generation Terrorists",
+    "artist": "Main Street Preachers",
+    "image": "main-street-preachers.webp",
+    "url": null
+  },
+  {
+    "id": 11,
+    "title": "Shake",
+    "artist": "Zucchero",
+    "image": "shake.webp",
+    "url": null
+  },
+  {
+    "id": 12,
+    "title": "Supersonic Generation",
+    "artist": "Hotei",
+    "image": "supersonic.webp",
+    "url": null
+  },
+  {
+    "id": 13,
+    "title": "Media",
+    "artist": "Media",
+    "image": "media.webp",
+    "url": null
+  },
+  {
+    "id": 14,
+    "title": "Good Stuff",
+    "artist": "B52's",
+    "image": "goodstuff.webp",
+    "url": null
+  },
+  {
+    "id": 15,
+    "title": "(bod'e-bag)",
+    "artist": "Bodybag",
+    "image": "bodybag.webp",
+    "url": null
+  },
+  {
+    "id": 16,
+    "title": "Kenza",
+    "artist": "Khaled",
+    "image": "kenza.webp",
+    "url": null
+  },
+  {
+    "id": 17,
+    "title": "Monter Amoureuse",
+    "artist": "Maya Barsony",
+    "image": "maya.webp",
+    "url": null
+  },
+  {
+    "id": 18,
+    "title": "I Used to Be",
+    "artist": "Gail Ann Dorsey",
+    "image": "gail.webp",
+    "url": null
+  },
+  {
+    "id": 19,
+    "title": "Alive and Well",
+    "artist": "David Bowie",
+    "image": "aliveandwell.webp",
+    "url": null
+  },
+  {
+    "id": 20,
+    "title": "Change for the Better",
+    "artist": "Maggies Dream",
+    "image": "maggiesdream.webp",
+    "url": null
+  },
+  {
+    "id": 21,
+    "title": "Taha Khaled Faudel",
+    "artist": "123 Soleils",
+    "image": "123-soleils.webp",
+    "url": null
+  },
+  {
+    "id": 22,
+    "title": "Galore",
+    "artist": "Jeffrey Gaines",
+    "image": "galore.webp",
+    "url": null
+  },
+  {
+    "id": 23,
+    "title": "When You're a Boy",
+    "artist": "Susanna Hoffs",
+    "image": "hoffs.webp",
+    "url": null
+  },
+  {
+    "id": 24,
+    "title": "Greatest Hits",
+    "artist": "Hotei",
+    "image": "hotei-greatest-hits.webp",
+    "url": null
+  },
+  {
+    "id": 25,
+    "title": "Catwalk Criminals",
+    "artist": "Kane",
+    "image": "kane.webp",
+    "url": null
+  },
+  {
+    "id": 26,
+    "title": "Make It Beautiful",
+    "artist": "Sara Lee",
+    "image": "make-it-beautiful.webp",
+    "url": null
+  },
+  {
+    "id": 27,
+    "title": "Caution to the Wind",
+    "artist": "Pura Fe",
+    "image": "pura-fe.webp",
+    "url": null
+  },
+  {
+    "id": 28,
+    "title": "Scorpio Rising",
+    "artist": "Hotei",
+    "image": "scorpio-rising.webp",
+    "url": null
+  },
+  {
+    "id": 29,
+    "title": "Time Was",
+    "artist": "Curtis Stiger",
+    "image": "time-was.webp",
+    "url": null
+  },
+  {
+    "id": 30,
+    "title": "Tonight I'm Yours",
+    "artist": "Hotei",
+    "image": "tonight-im-yours.webp",
+    "url": null
+  },
+  {
+    "id": 31,
+    "title": "Fetish",
+    "artist": "Hotei",
+    "image": "fetish.webp",
+    "url": null
+  },
+  {
+    "id": 32,
+    "title": "Todo es ahora",
+    "artist": "Manolo Garcia",
+    "image": "manolo-garcia.webp",
+    "url": null
+  },
+  {
+    "id": 33,
+    "title": "Tales from the Realm of the Queen of Pentacles",
+    "artist": "Suzanna Vega",
+    "image": "SVega.webp",
+    "url": null
+  },
+  {
+    "id": 34,
+    "title": "Jade Bird",
+    "artist": "Jade Bird",
+    "image": "JadeBird.webp",
+    "url": null
+  }
+]
