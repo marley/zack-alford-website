@@ -18,12 +18,8 @@ i18n.use(initReactI18next).init({
           "Professional drummer — live with The Psychedelic Furs and sessions with artists from Bowie to Springsteen.",
         "cta-tour": "Tour dates",
         "cta-listen": "Listen",
-        loading: "Loading dates…",
-        "tour-api-unavailable":
-          "Live dates could not be loaded from Bandsintown; showing saved dates below if any.",
         "tour-none":
-          "No upcoming dates listed here yet. Follow on Bandsintown for the latest tour announcements and tickets.",
-        "tour-follow-bit": "See all dates on Bandsintown",
+          "Check back for announcements, or get in touch.",
         "tour-tickets": "Tickets & info",
         "listen-config-hint":
           "Set VITE_SPOTIFY_ARTIST_ID and VITE_YOUTUBE_VIDEO_ID in .env to embed players here. You can also open",
