@@ -17,7 +17,7 @@ import kenza from "../img/album_covers/kenza.webp";
 import lettie from "../img/album_covers/lettie.webp";
 import maggiesDream from "../img/album_covers/maggiesdream.webp";
 import makeItBeautiful from "../img/album_covers/make-it-beautiful.webp";
-import mainStreetPreachers from "../img/album_covers/main-street-preachers.webp";
+import mainStreetPreachers from "../img/album_covers/manic-street-preachers.webp";
 import manoloGarcia from "../img/album_covers/manolo-garcia.webp";
 import maya from "../img/album_covers/maya.webp";
 import media from "../img/album_covers/media.webp";

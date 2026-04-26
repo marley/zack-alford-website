@@ -32,7 +32,7 @@
     "title": "Bruce Springsteen in Concert",
     "artist": "Bruce Springsteen",
     "image": "bruce-springsteen.webp",
-    "url": null
+    "url": "https://brucespringsteen.net/albums/in-concertmtv-plugged-2/"
   },
   {
     "id": 6,
@@ -53,35 +53,35 @@
     "title": "River of Dreams",
     "artist": "Billy Joel",
     "image": "billy-joel.webp",
-    "url": null
+    "url": "https://www.billyjoel.com/music/river-dreams/"
   },
   {
     "id": 9,
     "title": "Funplex",
     "artist": "B52's",
     "image": "funplex.webp",
-    "url": null
+    "url": "https://open.spotify.com/album/6bFNX9ugD96qPmz1g67AEl?si=N419U2ciQKuTbOIWKzDr-Q"
   },
   {
     "id": 10,
     "title": "Generation Terrorists",
-    "artist": "Main Street Preachers",
-    "image": "main-street-preachers.webp",
-    "url": null
+    "artist": "Manic Street Preachers",
+    "image": "manic-street-preachers.webp",
+    "url": "https://www.manicstreetpreachers.com/release/generation-terrorists-20th-anniversary-release/"
   },
   {
     "id": 11,
     "title": "Shake",
     "artist": "Zucchero",
     "image": "shake.webp",
-    "url": null
+    "url": "https://hyperurl.co/ShakeItalianVersion"
   },
   {
     "id": 12,
     "title": "Supersonic Generation",
     "artist": "Hotei",
     "image": "supersonic.webp",
-    "url": null
+    "url": "https://www.discogs.com/release/2743125-Hotei-Supersonic-Generation?srsltid=AfmBOopHVPazW2NmL0bSR6w8HvOcZsHcQ0EDxfuHHlCV0xvCrl62o2Wp"
   },
   {
     "id": 13,
@@ -123,7 +123,7 @@
     "title": "I Used to Be",
     "artist": "Gail Ann Dorsey",
     "image": "gail.webp",
-    "url": null
+    "url": "https://righteousbabe.ffm.to/eq6b3vm"
   },
   {
     "id": 19,
@@ -144,21 +144,21 @@
     "title": "Taha Khaled Faudel",
     "artist": "123 Soleils",
     "image": "123-soleils.webp",
-    "url": null
+    "url": "https://www.discogs.com/de/release/5072942-Taha-Khaled-Faudel-1-2-3-Soleils-En-Concert?srsltid=AfmBOooraD0z_cnkIG6PX1YW9n4kf8XLyf8osDofvSlQTUjh2o5EKsqj"
   },
   {
     "id": 22,
     "title": "Galore",
     "artist": "Jeffrey Gaines",
     "image": "galore.webp",
-    "url": null
+    "url": "https://music.apple.com/us/album/galore/301128083"
   },
   {
     "id": 23,
     "title": "When You're a Boy",
     "artist": "Susanna Hoffs",
     "image": "hoffs.webp",
-    "url": null
+    "url": "https://open.spotify.com/album/5jggxDQtP1eGNgqOAThQSY?si=Eco-ybyNRBio0fpXaAQyTw"
   },
   {
     "id": 24,
@@ -179,7 +179,7 @@
     "title": "Make It Beautiful",
     "artist": "Sara Lee",
     "image": "make-it-beautiful.webp",
-    "url": null
+    "url": "https://www.righteousbabe.com/products/make-it-beautiful?srsltid=AfmBOoroat-lQ_aNbWP-m4jIdWfZei9Syc4fKfHrkBSQt_W-LgRBdxV2"
   },
   {
     "id": 27,
@@ -200,14 +200,14 @@
     "title": "Time Was",
     "artist": "Curtis Stiger",
     "image": "time-was.webp",
-    "url": null
+    "url": "https://www.curtisstigers.com/music/album/time-was/"
   },
   {
     "id": 30,
     "title": "Tonight I'm Yours",
     "artist": "Hotei",
     "image": "tonight-im-yours.webp",
-    "url": null
+    "url": "https://www.discogs.com/de/master/1695072-Tomoyasu-Hotei-B-Side-Rendez-Vous-Tonight-Im-Yours?srsltid=AfmBOoqQYQfoA-dH0oXMk6w2Vf04v9AFFghfIFJkMji5_NbOkHkrKqhW"
   },
   {
     "id": 31,
@@ -228,13 +228,13 @@
     "title": "Tales from the Realm of the Queen of Pentacles",
     "artist": "Suzanna Vega",
     "image": "SVega.webp",
-    "url": null
+    "url": "https://open.spotify.com/album/5qAsemeYMf8TY20nf7tqdq?si=piqMSlUaQgSLPxDA8gZcSg"
   },
   {
     "id": 34,
     "title": "Jade Bird",
     "artist": "Jade Bird",
     "image": "JadeBird.webp",
-    "url": null
+    "url": "https://jade-bird.lnk.to/JadeBird"
   }
 ]
