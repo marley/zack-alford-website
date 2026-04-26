@@ -48,7 +48,7 @@ i18n.use(initReactI18next).init({
         },
         "biography-para-1": {
           title: "",
-          text: 'Zachary "Zack" Alford is a New York based professional drummer known for having toured and/or recorded with some of the world\'s top musicians. He grew up on Manhattan\'s upper west side during the robust eras of the 1970\'s and 1980\'s. After having established himself on the club scene, there, and a brief stint at Berklee College of Music (1986-1987), his career began to take off. He has played with The B-52\'s, The Psychedelic Furs, David Bowie, Bruce Springsteen, Billy Joel, Gwen Stefani, Nena, The Manic Street Preachers, Tomoyasu Hotei, Zucchero Fornicari, Suzanne Vega, James Chance, The Dance, Melvin Gibbs, Vernon Reid, Kelvyn Bell, Grayson Hugh, Ivan Julian, Manolo Garcia, Rafael, Kelly Clarkson, Suzanna Hoffs, Maggie\'s Dream, and more.',
+          text: 'Zachary "Zack" Alford is a New York based professional drummer known for having toured and/or recorded with some of the world\'s top musicians. He grew up on Manhattan\'s upper west side during the robust eras of the 1970\'s and 1980\'s. After having established himself on the club scene there, and a brief stint at Berklee College of Music (1986-1987), his career began to take off. He has played with The B-52\'s, The Psychedelic Furs, David Bowie, Bruce Springsteen, Billy Joel, Gwen Stefani, Nena, The Manic Street Preachers, Tomoyasu Hotei, Zucchero Fornicari, Suzanne Vega, James Chance, The Dance, Melvin Gibbs, Vernon Reid, Kelvyn Bell, Grayson Hugh, Ivan Julian, Manolo Garcia, Rafael, Kelly Clarkson, Suzanna Hoffs, Maggie\'s Dream, and more.',
         },
         "biography-para-2": {
           title: "EARLY CAREER",
