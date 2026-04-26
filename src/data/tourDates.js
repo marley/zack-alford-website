@@ -11,15 +11,15 @@
  * - ticketsUrl: string (optional) — tickets or show info
  */
 export const manualTourDates = [
-  // {
-  //   id: "2026-05-10-ryman",
-  //   date: "2026-05-10",
-  //   artist: "Example Artist",
-  //   artistUrl: "https://example.com",
-  //   venue: "Ryman Auditorium",
-  //   city: "Nashville",
-  //   region: "TN",
-  //   country: "US",
-  //   ticketsUrl: "https://...",
-  // },
-];
+//   {
+//     id: "2026-05-10-ryman",
+//     date: "2026-05-10",
+//     artist: "Example Artist",
+//     artistUrl: "https://example.com",
+//     venue: "Ryman Auditorium",
+//     city: "Nashville",
+//     region: "TN",
+//     country: "US",
+//     ticketsUrl: "https://...",
+//   },
+ ];

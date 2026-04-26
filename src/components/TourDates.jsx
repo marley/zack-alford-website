@@ -22,21 +22,23 @@ const TourDates = () => {
   );
 
   return (
-    <div className="w-full max-w-3xl mx-auto">
+    <div className="w-full max-w-3xl mx-auto" id="tour" title={t("tour")}>
       {events.length === 0 ? (
-        <p className="text-gray-400 text-center md:text-left">{t("tour-none")}</p>
+        <p className="text-gray-300 text-lg md:text-xl text-center md:text-left">
+          {t("tour-none")}
+        </p>
       ) : (
         <ul className="space-y-4" role="list">
           {events.map((show) => (
             <li
               key={show.id}
-              className="border-l-4 border-green-400 pl-4 py-1 bg-white/5 rounded-r"
+              className="border-l-4 border-green-400 pl-5 py-2 bg-white/5 rounded-r"
             >
-              <p className="font-display text-green-400">
+              <p className="font-display text-green-400 text-lg">
                 {formatShowDate(show.date)}
               </p>
               {show.artist ? (
-                <p className="text-gray-100 text-lg font-medium mt-1">
+                <p className="text-gray-100 text-xl md:text-2xl font-medium mt-1">
                   {show.artistUrl ? (
                     <a
                       href={show.artistUrl}
@@ -51,20 +53,20 @@ const TourDates = () => {
                   )}
                 </p>
               ) : null}
-              <p className="text-gray-200 text-lg mt-1">
+              <p className="text-gray-200 text-lg md:text-xl mt-1">
                 {[show.venue, [show.city, show.region].filter(Boolean).join(", ")]
                   .filter(Boolean)
                   .join(" · ")}
               </p>
               {show.country ? (
-                <p className="text-gray-500 text-sm">{show.country}</p>
+                <p className="text-gray-500 text-base">{show.country}</p>
               ) : null}
               {show.ticketsUrl ? (
                 <a
                   href={show.ticketsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block mt-2 font-display text-sm text-green-400 hover:underline"
+                  className="inline-block mt-2 font-display text-base text-green-400 hover:underline"
                 >
                   {t("tour-tickets")}
                 </a>

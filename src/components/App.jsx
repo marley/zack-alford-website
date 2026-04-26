@@ -6,12 +6,13 @@ import Page from "./Page";
 import Biography from "./Biography";
 import TourDates from "./TourDates";
 import Listen from "./Listen";
-import News from "./News";
+// import News from "./News";
 import Discography from "./Discography";
 import Gallery from "./Gallery";
 import Gear from "./Gear";
 import Connect from "./Connect";
 import { tracks } from "../data/tracks";
+import { tourBannerImage } from "../data/tourBackground";
 
 const App = () => {
   const { t } = useTranslation();
@@ -37,7 +38,13 @@ const App = () => {
         className="bg-black fixed top-20 left-0 bottom-0 overflow-y-scroll"
       >
         <LandingPage id="main" siteTitle="Zachary Alford" />
-        <Page id="tour" title={t("tour")}>
+        <Page
+          id="tour"
+          title={t("tour")}
+          shrinkToContent
+          banner
+          bannerImage={tourBannerImage}
+        >
           <TourDates />
         </Page>
         { tracks.length > 0 &&
@@ -54,9 +61,9 @@ const App = () => {
         <Page id="gallery" title={t("gallery")}>
           <Gallery />
         </Page>
-        <Page id="news" title={t("news")}>
+        {/* <Page id="news" title={t("news")}>
           <News />
-        </Page>
+        </Page> */}
         <Page id="gear" title={t("gear")} titleContrast={true}>
           <Gear />
         </Page>
