@@ -69,7 +69,7 @@ const Connect = () => {
       </div>
       <div className="md:absolute md:top-1/2 md:left-1/2 w-full max-w-2xl md:max-w-none md:w-auto md:-translate-x-1/2 md:-translate-y-1/2">
         {links.length === 0 ? (
-          <p className="text-white/80 text-center py-4">{t("connect-empty")}</p>
+          <p className="text-gray-500 text-center py-4">{t("connect-empty")}</p>
         ) : (
           <ul
             className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4 justify-items-stretch p-0 list-none m-0"

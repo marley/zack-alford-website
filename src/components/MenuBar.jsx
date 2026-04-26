@@ -11,7 +11,7 @@ const MenuBar = ({ pages }) => {
         : "flex items-center pr-4 py-2 hover:text-green-400";
 
     return (
-      <div key={title} className={`text-white ${style}`}>
+      <div key={title} className={`text-gray-200 ${style}`}>
         <button className="uppercase" type="button">
           <Link
             activeClass="active"

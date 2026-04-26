@@ -7,16 +7,20 @@ const Biography = () => {
   let counter = 0;
   for (let i = 0; i < 7; i++) {
     if (i % 2 === 1) {
-      text.push(<br />);
+      text.push(<br key={`br-${i}`} />);
     } else {
+      const paraIndex = counter + 1;
       text.push(
-        <li className="mt-3 mb-3 ml-6">
-          <div className="absolute -left-2 mt-6 rounded-full border-4 bg-white"></div>
+        <li key={`biography-para-${paraIndex}`} className="mt-3 mb-3 ml-6">
+          <div
+            className="absolute -left-2 mt-6 rounded-full border-4 bg-white"
+            aria-hidden
+          />
           <h2 className="text-red-600 font-display">
-            {t(`biography-para-${counter + 1}.title`)}
+            {t(`biography-para-${paraIndex}.title`)}
           </h2>{" "}
-          <p key={i} className="sm:text-base md:text-lg text-white">
-            {t(`biography-para-${counter + 1}.text`)}
+          <p className="sm:text-base md:text-lg text-gray-300">
+            {t(`biography-para-${paraIndex}.text`)}
           </p>
         </li>
       );

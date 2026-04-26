@@ -96,7 +96,7 @@ const TourDates = () => {
       )}
       {events.length === 0 ? (
         <div className="text-center md:text-left">
-          <p className="text-white/90 mb-4">{t("tour-none")}</p>
+          <p className="text-gray-400 mb-4">{t("tour-none")}</p>
           {bitPage ? (
             <a
               href={bitPage}
@@ -118,13 +118,13 @@ const TourDates = () => {
               <p className="font-display text-green-400">
                 {formatShowDate(show.date)}
               </p>
-              <p className="text-white text-lg">
+              <p className="text-gray-200 text-lg">
                 {[show.venue, [show.city, show.region].filter(Boolean).join(", ")]
                   .filter(Boolean)
                   .join(" · ")}
               </p>
               {show.country ? (
-                <p className="text-white/70 text-sm">{show.country}</p>
+                <p className="text-gray-500 text-sm">{show.country}</p>
               ) : null}
               {show.ticketsUrl ? (
                 <a

@@ -16,7 +16,7 @@ function formatNewsDate(iso) {
 const News = () => {
   const { t } = useTranslation();
   if (!newsItems.length) {
-    return <p className="text-white/80 text-center">{t("news-empty")}</p>;
+    return <p className="text-gray-500 text-center">{t("news-empty")}</p>;
   }
   return (
     <ul className="w-full max-w-3xl mx-auto space-y-6" role="list">
@@ -33,15 +33,15 @@ const News = () => {
               href={item.link}
               target="_blank"
               rel="noreferrer"
-              className="text-xl font-display text-white hover:text-green-400"
+              className="text-xl font-display text-gray-100 hover:text-green-400"
             >
               {item.title} →
             </a>
           ) : (
-            <h3 className="text-xl font-display text-white">{item.title}</h3>
+            <h3 className="text-xl font-display text-gray-100">{item.title}</h3>
           )}
           {item.blurb ? (
-            <p className="text-white/85 mt-2 leading-relaxed">{item.blurb}</p>
+            <p className="text-gray-400 mt-2 leading-relaxed">{item.blurb}</p>
           ) : null}
         </li>
       ))}

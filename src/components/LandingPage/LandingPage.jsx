@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Element, Link } from "react-scroll";
 import { carouselData } from "../../assets/carousel";
@@ -32,15 +33,24 @@ const LandingPage = (props) => {
     <Element name={props.id} className="element">
       <section
         id={props.id}
-        className="relative mb-20 bg-black text-white min-h-[50vh]"
+        className="relative mb-20 bg-black text-gray-200 min-h-[50vh]"
       >
         <div className="absolute bottom-0 left-0 z-20 w-full max-w-full pr-2 pb-6 pl-2 md:pb-10 md:pl-3 pointer-events-none">
           <div className="pointer-events-auto max-w-lg">
-            <div className="bg-black/45 backdrop-blur-md border border-white/20 rounded-2xl p-5 md:p-8 shadow-2xl">
-              <h1 className="text-left font-display text-4xl sm:text-6xl md:text-7xl text-white leading-none mb-3">
+            <motion.div
+              className="bg-black/45 backdrop-blur-md border border-white/20 rounded-2xl p-5 md:p-8 shadow-2xl"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.55,
+                ease: [0.25, 0.1, 0.25, 1],
+                delay: 0.08,
+              }}
+            >
+              <h1 className="text-left font-display text-4xl sm:text-6xl md:text-7xl text-gray-100 leading-none mb-3 tracking-tight">
                 {title}
               </h1>
-              <p className="text-white/90 font-body text-sm md:text-base mb-5 max-w-md">
+              <p className="text-gray-400 font-body text-sm md:text-base mb-5 max-w-md leading-relaxed">
                 {t("hero-subtitle")}
               </p>
               <div className="flex flex-wrap gap-2">
@@ -69,7 +79,7 @@ const LandingPage = (props) => {
                   {t("cta-listen")}
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <Carousel

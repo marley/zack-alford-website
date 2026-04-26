@@ -27,7 +27,7 @@ const App = () => {
   ];
 
   return (
-    <div className="App px-4 bg-black text-white">
+    <div className="App px-4 bg-black text-gray-200">
       <MenuBar pages={pages} />
       <main
         id="main-container"
@@ -58,7 +58,7 @@ const App = () => {
         <Page id="connect" title={t("connect")}>
           <Connect />
         </Page>
-        <div className="footer font-display">
+        <div className="footer font-display text-gray-600">
           <p>
             {t("zack-alford-copyright", {
               year: new Date().getFullYear(),
@@ -66,8 +66,8 @@ const App = () => {
           </p>
           <small>{t("site-by")}</small>
           <a
-            href="https://github.com/ma8642"
-            className="hover:underline"
+            href="https://github.com/marley"
+            className="hover:underline text-gray-500 hover:text-gray-200"
             target="_blank"
             rel="noreferrer"
           >

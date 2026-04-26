@@ -13,7 +13,7 @@ const Listen = () => {
 
   if (!hasSpotify && !hasVideo) {
     return (
-      <p className="text-white/80 text-center max-w-xl mx-auto">
+      <p className="text-gray-500 text-center max-w-xl mx-auto">
         {t("listen-config-hint")}{" "}
         {spotifyUrl && (
           <a
