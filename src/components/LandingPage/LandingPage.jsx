@@ -5,6 +5,7 @@ import { Element, Link } from "react-scroll";
 import { carouselData } from "../../assets/carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { tracks } from "../../data/tracks";
 import "./overrides.css";
 
 const ctaButtonClass =
@@ -66,18 +67,20 @@ const LandingPage = (props) => {
                 >
                   {t("cta-tour")}
                 </Link>
-                <Link
-                  activeClass="active"
-                  to="listen"
-                  spy={true}
-                  smooth={true}
-                  duration={250}
-                  containerId="main-container"
-                  href="#listen"
-                  className={ctaButtonClass}
-                >
-                  {t("cta-listen")}
-                </Link>
+                {tracks.length > 0 &&
+                  <Link
+                    activeClass="active"
+                    to="listen"
+                    spy={true}
+                    smooth={true}
+                    duration={250}
+                    containerId="main-container"
+                    href="#listen"
+                    className={ctaButtonClass}
+                  >
+                    {t("cta-listen")}
+                  </Link>
+                }
               </div>
             </motion.div>
           </div>
