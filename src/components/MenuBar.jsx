@@ -11,8 +11,8 @@ const MenuBar = ({ pages }) => {
         : "flex items-center pr-4 py-2 hover:text-green-400";
 
     return (
-      <div key={title} className={`text-white ${style}`}>
-        <button className="uppercase">
+      <div key={title} className={`text-gray-200 ${style}`}>
+        <button className="uppercase" type="button">
           <Link
             activeClass="active"
             to={title}
@@ -30,7 +30,7 @@ const MenuBar = ({ pages }) => {
 
   const mobileMenuItems = pages.map((title) => {
     return (
-      <li className="text-green-400">
+      <li key={title} className="text-green-400">
         <Link
           activeClass="active"
           to={title}
@@ -49,21 +49,39 @@ const MenuBar = ({ pages }) => {
   return (
     <nav className="flex items-center justify-between flex-wrap py-6 bg-black w-screen max-w-full">
       <div className="text-sm flex flex-row justify-end items-center font-display w-full">
-        <div
-          className="MOBILE-MENU flex flex-col lg:hidden"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <>
+        <div className="MOBILE-MENU flex flex-col lg:hidden">
+          <button
+            type="button"
+            className="flex flex-col self-end p-0 border-0 bg-transparent cursor-pointer"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu-panel"
+            onClick={() => setIsMobileMenuOpen((o) => !o)}
+          >
             <span className="w-8 bg-green-400 px-4 py-0.5 mb-2"> </span>
             <span className="w-8 bg-green-400 px-4 py-0.5 mb-2"> </span>
             <span className="w-8 bg-green-400 px-4 py-0.5 mb-2"> </span>
-          </>
-          <div className={isMobileMenuOpen ? "showMenuNav" : "hideMenuNav"}>
-            <CloseOutlined
-              className="absolute top-0 right-0 px-5 py-5 text-2xl text-green-400"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-            <ul>{mobileMenuItems}</ul>
+          </button>
+          <div
+            id="mobile-menu-panel"
+            className={isMobileMenuOpen ? "showMenuNav" : "hideMenuNav"}
+            onClick={() => setIsMobileMenuOpen(false)}
+            role="presentation"
+          >
+            <button
+              type="button"
+              className="absolute top-0 right-0 z-20 px-5 py-5 text-2xl text-green-400 border-0 bg-transparent cursor-pointer"
+              aria-label="Close menu"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              <CloseOutlined />
+            </button>
+            <ul onClick={(e) => e.stopPropagation()} role="list">
+              {mobileMenuItems}
+            </ul>
           </div>
         </div>
         <div className="DESKTOP-MENU hidden lg:flex">{desktopMenuItems}</div>

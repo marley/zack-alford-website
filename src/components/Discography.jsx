@@ -7,12 +7,14 @@ const Discography = () => {
   const { t } = useTranslation();
   const increment = 8;
   const [maxAlbums, setMaxAlbums] = useState(increment);
-  const albumsData = albums.map((album, i) => (
+  const albumsData = albums.map((album) => (
     <img
       key={album.id}
       src={album.src}
       alt={`Album cover for ${album.title} by ${album.artist}`}
-      maxWidth="50%"
+      className="w-full h-auto"
+      loading="lazy"
+      decoding="async"
     />
   ));
 

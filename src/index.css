@@ -1,5 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@400;500;600;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap");
+@layer base {
+  body {
+    @apply font-body text-gray-300 antialiased;
+  }
+  #root {
+    @apply min-h-screen;
+  }
+}

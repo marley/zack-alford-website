@@ -5,33 +5,23 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.4",
-    "@craco/craco": "^6.2.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
+    "framer-motion": "^11.18.2",
     "i18next": "^20.6.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-i18next": "^11.11.4",
     "react-responsive-carousel": "^3.2.23",
-    "react-scripts": "4.0.3",
-    "react-scroll": "^1.8.4",
-    "web-vitals": "^1.1.2"
+    "react-scroll": "^1.8.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject",
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
     "copy": "cp ./CNAME ./build/CNAME",
     "predeploy": "npm run build && npm run copy",
     "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -46,9 +36,15 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^9.8.6",
     "gh-pages": "^4.0.0",
+    "jsdom": "^25.0.1",
     "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.9"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.9",
+    "vite": "^6.0.11",
+    "vitest": "^2.1.8"
   }
 }
